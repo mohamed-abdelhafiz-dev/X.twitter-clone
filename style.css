@@ -1,0 +1,844 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    overflow-x: hidden;
+}
+
+.main-container {
+    width: 100%;
+    display: flex;
+}
+
+.main-container header {
+    width: 26.3%;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgb(255, 255, 255, 0.2);
+    height: 100vh;
+    padding: 3px 8px 18px 8.9%;
+    position: fixed;
+}
+
+.main-container header .main-logo {
+    width: fit-content;
+    height: 50px;
+    padding: 10px;
+}
+
+.main-container header .main-logo a {
+    color: white;
+}
+
+.main-container header .main-logo a svg {
+    width: 30px;
+    height: 30px;
+    fill: currentColor;
+}
+
+.main-container header nav {
+    height: 555px;
+    margin: 7px 0;
+}
+
+.main-container header nav .nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.main-container header nav .nav-links a {
+    display: flex;
+    color: white;
+    align-items: center;
+    width: fit-content;
+    text-decoration: none;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.main-container header nav .nav-links a:hover,
+.main-container header .main-logo:hover,
+.main-container header .profile:hover {
+    background-color: #222;
+    border-radius: 100px;
+}
+
+.main-container header nav .nav-links a span {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+
+
+
+.main-container header nav .nav-links a:first-child span {
+    font-weight: 700;
+}
+
+.main-container header nav .nav-links a svg {
+    width: 27px;
+    height: 27px;
+    margin-right: 20px;
+    fill: currentColor;
+}
+
+
+.post-btn {
+    width: 15vw;
+    height: 52px;
+    transition: 0.3s;
+    border-radius: 80px;
+    background-color: rgb(29, 155, 240);
+    border: none;
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 25px;
+}
+
+.post-btn:hover {
+    background-color: rgba(29, 155, 240, 0.9);
+
+}
+
+.main-container header .profile {
+    height: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    cursor: pointer;
+    margin-top: 45px;
+}
+
+.main-container header .profile .profile-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-container header .profile .profile-details {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+    margin-left: 0.7vw;
+}
+
+.main-container header .profile .profile-details .profile-name {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.main-container header .profile .profile-details .profile-handle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: gray;
+}
+
+.profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+main {
+    width: 73.7%;
+    min-height: 100vh;
+    display: flex;
+    margin-left: 26.3%;
+}
+
+
+main .side-feed {
+    width: 45%;
+}
+
+main .main-feed {
+    width: 55%;
+}
+
+main .main-feed {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgb(255, 255, 255, 0.2);
+}
+
+main .main-feed .taps {
+    background-color: rgb(0, 0, 0, 0.89);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    height: 55px;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+}
+
+main .main-feed .taps span {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+
+}
+
+main .main-feed .taps span:hover {
+    background-color: #222;
+    cursor: pointer;
+}
+
+main .main-feed .taps span:nth-child(2) {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: gray;
+
+}
+
+main .main-feed .taps span:first-child {
+    position: relative;
+}
+
+main .main-feed .taps span:first-child::after {
+    content: '';
+    position: absolute;
+    width: 55px;
+    height: 4px;
+    background-color: rgb(29, 155, 240);
+    bottom: 0.7px;
+    border-radius: 10px;
+}
+
+.post-tweet {
+    width: 100%;
+    min-height: 125px;
+    display: flex;
+
+    padding: 8px 8px 8px 13px;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+}
+
+.post-tweet img {
+    margin-top: 5px;
+}
+
+.post-tweet img:hover,
+.tweeter-details img:hover,
+.side-feed .who-to-follow img:hover {
+    cursor: pointer;
+    opacity: 0.85;
+}
+
+.post-tweet .post-btn {
+    width: fit-content;
+    border-radius: 50px;
+    height: fit-content;
+    padding: 10px 15px;
+    margin: 0;
+    opacity: 0.5;
+    font-size: 1.5rem;
+    cursor: auto;
+
+}
+
+.post-tweet .post-btn:hover {
+    background-color: rgb(29, 155, 240);
+    opacity: 0.5;
+
+}
+
+.tweet-input-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tweet-input-buttons input {
+    width: 100%;
+    height: 50%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+}
+
+.tweet-input-buttons .post-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.tweet-input-buttons .post-buttons .icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 43%;
+    margin-left: 10px;
+    color: rgb(29, 155, 240);
+    font-weight: 100;
+}
+
+.tweet-input-buttons .post-buttons .icons span {
+    outline: none;
+    font-weight: 300;
+    cursor: pointer;
+    font-size: 2.3rem;
+}
+
+.show-70-posts {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.show-70-posts span {
+    font-size: 1.5rem;
+    color: rgb(29, 155, 240);
+}
+
+.tweet {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+    width: 100%;
+    padding: 8px 10px;
+    cursor: pointer;
+}
+
+.tweeter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+
+.tweeter .tweeter-details {
+    display: flex;
+    width: fit-content;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+
+.tweeter .tweeter-details .name {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin: 0 3px 0 10px;
+}
+
+.tweeter .tweeter-details .name:hover {
+    text-decoration: underline;
+
+}
+
+.tweeter .tweeter-details .verified {
+    color: rgb(29, 155, 240);
+    fill: black;
+    font-weight: bold;
+    font-size: 1.6rem;
+    margin-top: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.tweeter .tweeter-details .handle {
+    font-size: 1.5rem;
+    color: gray;
+    line-height: 1.7;
+    cursor: pointer;
+}
+
+.more {
+    cursor: pointer;
+    color: gray;
+}
+
+p {
+    font-size: 1.4rem;
+    font-weight: normal;
+    margin-bottom: 10px;
+    padding-right: 3px;
+    margin-left: 50px;
+    margin-top: -15px;
+    font-size: 1.6rem;
+}
+
+p+img {
+    margin: 8px;
+    margin-left: 50px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    border: 2px solid rgb(255, 255, 255, 0.2);
+}
+
+.activities {
+    width: calc(100% - 58px);
+    display: flex;
+    justify-content: space-around;
+    margin-left: 50px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    align-items: center;
+    color: gray;
+}
+
+.activities svg {
+    fill: gray;
+    width: 20px;
+    height: 20px;
+}
+
+.activities div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.activities div span {
+    margin-left: 5px;
+    font-size: 1.5rem;
+}
+
+.bookmarkANDshare div {
+    margin-left: 10px;
+}
+
+.activities div:hover {
+    color: rgb(29, 155, 240);
+}
+
+.activities div:not(.bookmarkANDshare):hover svg {
+    fill: rgb(29, 155, 240);
+}
+
+.side-feed-container {
+    padding: 0 130px 130px 35px;
+    width: fit-content;
+}
+
+.side-feed-container div:nth-last-of-type(2) {
+    width: 100%;
+}
+
+.search-box {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-start;
+    background-color: black;
+    color: gray;
+    padding: 15px;
+    border-radius: 100px;
+    background-color: #222;
+    position: sticky;
+    top: 0;
+    margin-bottom: 25px;
+}
+
+
+.search-box input {
+    background-color: inherit;
+    border: none;
+    height: 100%;
+    width: 100%;
+    margin-left: 20px;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: normal;
+}
+
+.search-box input::placeholder {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.search-box input:focus {
+    outline: none;
+}
+
+.search-box:has(input:focus) {
+    border: 1px solid rgb(29, 155, 240);
+    background-color: black;
+}
+
+.search-box:has(input:focus) svg {
+    fill: rgb(29, 155, 240);
+}
+
+
+.search-box svg {
+    width: 25px;
+    height: 25px;
+    fill: gray;
+}
+
+.subscribe-to-prem {
+    display: flex;
+    flex-direction: column;
+    min-height: 150px;
+    justify-content: space-between;
+    padding: 15px;
+    border: 1px solid rgb(255, 255, 255, 0.2);
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.subscribe-to-prem .post-btn {
+    width: fit-content;
+    border-radius: 0;
+    padding: 10px 15px;
+    border-radius: 100px;
+    height: fit-content;
+}
+
+.subscribe-to-prem p {
+    margin: 10px 0;
+    line-height: 1.3;
+    font-size: 1.5rem;
+
+}
+
+.side-feed h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.what-is-happening {
+    padding: 15px;
+    border: 1px solid rgb(255, 255, 255, 0.2);
+    border-radius: 15px;
+    width: 100%;
+}
+
+.what-is-happening .trending-topic {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60px;
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.what-is-happening .trending-topic .topic-details,
+.what-is-happening .trending-topic .topic-followers {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 1.4rem;
+    color: gray;
+}
+
+.what-is-happening .trending-topic .topic-name {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.what-is-happening .show-70-posts {
+    justify-content: start;
+    border-bottom: none;
+    margin-top: 25px;
+
+
+    height: auto;
+}
+
+.side-feed .who-to-follow {
+    padding: 15px;
+    border: 1px solid rgb(255, 255, 255, 0.2);
+    border-radius: 15px;
+    min-width: fit-content;
+    margin-top: 25px;
+}
+
+.side-feed .who-to-follow .account {
+    display: flex;
+    width: 100%;
+    align-content: center;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.side-feed .who-to-follow .account .post-btn {
+    width: auto;
+    height: fit-content;
+    padding: 7px 15px;
+    line-height: initial;
+    margin: 0;
+    background-color: white;
+    color: black;
+    font-size: 1.5rem;
+    transition: 0.5s;
+    margin-left: 20px;
+}
+
+.side-feed .who-to-follow .account .post-btn:hover {
+    background-color: rgb(255, 255, 255, 0.85);
+}
+
+.side-feed .who-to-follow .account .account-details {
+    display: flex;
+}
+
+.side-feed .who-to-follow .account .account-details .account-user {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    justify-content: space-between;
+}
+
+.side-feed .who-to-follow .account .account-details .account-user span:first-child {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.side-feed .who-to-follow .account .account-details .account-user span:first-child:hover {
+    text-decoration: underline;
+}
+
+.side-feed .who-to-follow .account .account-details .account-user span:last-child {
+    color: gray;
+    font-size: 1.4rem;
+}
+
+.side-feed .who-to-follow .show-70-posts {
+    justify-content: start;
+    margin-top: 25px;
+    border-bottom: none;
+    height: fit-content;
+}
+
+.footer-sidefeed {
+    margin-top: 17px;
+    padding-left: 15px;
+    line-height: 1.7;
+    font-size: 1.3rem;
+
+}
+
+.footer-sidefeed span {
+    margin-right: 7px;
+    color: gray;
+}
+
+.footer-sidefeed span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media screen and (max-width:700px) {
+    html {
+        font-size: 8px;
+    }
+
+    .main-container header nav .nav-links a {
+        padding: 0;
+        width: fit-content;
+    }
+
+    .main-container header nav .nav-links a svg {
+        margin: 0;
+
+    }
+
+    .main-container header nav .nav-links a span {
+        margin: 0;
+        display: none;
+    }
+
+    .main-container header {
+        padding: 5px 0;
+        width: 25%;
+        padding-right: 8vw;
+        padding-left: 6vw;
+    }
+
+    .main-container header .post-btn,
+    .main-container main .main-feed .tweeter-details .handle,
+    .main-container header .profile .profile-details,
+    .main-container header .profile i,
+    .main-container main .side-feed,
+    .main-container main .main-feed .post-tweet img {
+        display: none;
+    }
+
+    .main-container header .main-logo {
+        padding: 0;
+        margin-bottom: 35px;
+    }
+
+
+    .main-container .main-feed .post-btn {
+        width: 5rem;
+        height: 5rem;
+        padding: 1rem;
+        border-radius: 15px;
+    }
+
+    .main-container header .profile,
+    .main-feed .tweet .tweeter-details img {
+        width: fit-content;
+        padding: 0;
+        width: 3.5rem;
+        height: 3.5rem;
+        margin-bottom: 20px;
+        margin-left: 0;
+    }
+
+    .main-container header .profile img {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .main-container main .main-feed {
+        width: 100%;
+    }
+
+    .main-container main {
+        width: 75%;
+        padding-right: 3vw;
+    }
+
+
+    .main-container main .main-feed .post-buttons .icons span {
+        margin-right: 1vw;
+    }
+
+    .main-container main .main-feed .activities span {
+        display: none;
+    }
+
+    .main-container main .main-feed .activities .bookmarkANDshare {
+        display: none;
+    }
+}
+
+@media screen and (min-width:701px) and (max-width:1000px) {
+    .side-feed button {
+        display: none;
+    }
+}
+
+@media screen and (min-width:701px) and (max-width:1200px) {
+    html {
+        font-size: 8.5px;
+    }
+
+    .side-feed {
+        padding-right: 10vw;
+    }
+
+
+
+    .main-container header nav .nav-links a {
+        padding: 0;
+        width: fit-content;
+    }
+
+    .main-container header nav .nav-links a svg {
+        margin: 0;
+
+    }
+
+    .main-container header nav .nav-links a span {
+        margin: 0;
+        display: none;
+    }
+
+    .main-container header {
+        padding: 5px 0;
+        width: 10%;
+        padding-right: 8vw;
+        padding-left: 6vw;
+    }
+
+    .main-container header .post-btn,
+    .main-container main .main-feed .tweeter-details .handle,
+    .main-container header .profile .profile-details,
+    .main-container header .profile i,
+    .main-container main .main-feed .post-tweet img {
+        display: none;
+    }
+
+    .main-container header .main-logo {
+        padding: 0;
+        margin-bottom: 35px;
+    }
+
+
+    .main-container .main-feed .post-btn {
+        width: 5rem;
+        height: 5rem;
+        padding: 1rem;
+        border-radius: 15px;
+    }
+
+    .main-container header .profile,
+    .main-feed .tweet .tweeter-details img {
+        width: fit-content;
+        padding: 0;
+        width: 3.5rem;
+        height: 3.5rem;
+        margin-bottom: 20px;
+        margin-left: 0;
+    }
+
+    .main-container header .profile img {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .main-container main .main-feed {
+        width: 50%;
+    }
+
+    .main-container main {
+        width: 90%;
+        padding-right: 3vw;
+    }
+
+
+    .main-container main .main-feed .post-buttons .icons span {
+        margin-right: 1vw;
+    }
+
+    .main-container main .main-feed .activities span {
+        display: none;
+    }
+
+    .main-container main .main-feed .activities .bookmarkANDshare {
+        display: none;
+    }
+
+}
