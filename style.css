@@ -315,12 +315,11 @@ main .main-feed .taps span:first-child::after {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgb(255, 255, 255, 0.2);
     cursor: pointer;
 }
-
-.show-70-posts:hover {
-    background-color: rgb(27, 26, 26);
+.show-70-posts:hover{
+    background-color: rgb(26, 25, 25);
 }
 
 .show-70-posts span {
